@@ -1,10 +1,11 @@
 package edu.orangecoastcollege.cs273.dpham147.shippingcalculator;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.text.NumberFormat;
 
@@ -13,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
     private static NumberFormat currency = NumberFormat.getCurrencyInstance();
 
     private EditText weightEditText;
-    private EditText costNumTextView;
-    private EditText addedNumTextView;
-    private EditText totalNumTextView;
+    private TextView costNumTextView;
+    private TextView addedNumTextView;
+    private TextView totalNumTextView;
 
     ShipItem currentItem = new ShipItem();
 
@@ -23,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        weightEditText = (EditText) findViewById(R.id.weightEditText);
+        costNumTextView = (TextView) findViewById(R.id.costNumTextView);
+        addedNumTextView = (TextView) findViewById(R.id.addedCostNumTextView);
+        totalNumTextView = (TextView) findViewById(R.id.totalNumTextView);
+
+        weightEditText.addTextChangedListener(weightListener);
     }
 
     private TextWatcher weightListener = new TextWatcher() {
@@ -51,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         public void afterTextChanged(Editable s) {
 
         }
-    }
+    };
 
     private void updateViews(){
         costNumTextView.setText(currency.format(currentItem.getBaseCost()));
