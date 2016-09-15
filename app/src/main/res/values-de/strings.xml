@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shipping Calculator</string>
+    <string name="addedCostText">Hinzugefügt Kosten:</string>
+    <string name="baseCostText">Basiskosten:</string>
+    <string name="ounceText">(In Unzen)</string>
+    <string name="titleText"> Gewicht des Pakets</string>
+    <string name="totalText"> Gesamtversandkosten </string>
+    <string name="addedCostNumText">0</string>
+    <string name="costNumText">0</string>
+    <string name="totalCostNumText">0</string>
+</resources>

@@ -22,10 +22,6 @@ public class ShipItem {
         recalculate();
     }
 
-    public double getWeight() {
-        return mWeight;
-    }
-
     public void setWeight(double mWeight) {
         this.mWeight = mWeight;
         recalculate();
