@@ -44,12 +44,18 @@ public class MainActivity extends AppCompatActivity {
             } catch (NumberFormatException e) {
                 weightEditText.setText("");
             }
-
+            updateViews();
         }
 
         @Override
         public void afterTextChanged(Editable s) {
 
         }
+    }
+
+    private void updateViews(){
+        costNumTextView.setText(currency.format(currentItem.getBaseCost()));
+        addedNumTextView.setText(currency.format(currentItem.getAddedCost()));
+        totalNumTextView.setText(currency.format(currentItem.getTotalCost()));
     }
 }
