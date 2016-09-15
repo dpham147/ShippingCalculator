@@ -5,24 +5,28 @@ package edu.orangecoastcollege.cs273.dpham147.shippingcalculator;
  */
 public class ShipItem {
 
-    private double mWeightAmount;
+    private double mWeight;
     private double mBaseCost;
     private double mAddedCost;
     private double mTotalCost;
 
     public ShipItem() {
-        mWeightAmount = 0.0;
+        mWeight = 0.0;
         mBaseCost = 0.0;
         mAddedCost = 0.0;
         mTotalCost = 0.0;
     }
 
-    public double getWeightAmount() {
-        return mWeightAmount;
+    public ShipItem(double weight) {
+        this.mWeight = weight;
     }
 
-    public void setWeightAmount(double mWeightAmount) {
-        this.mWeightAmount = mWeightAmount;
+    public double getWeight() {
+        return mWeight;
+    }
+
+    public void setWeight(double mWeight) {
+        this.mWeight = mWeight;
     }
 
     public double getBaseCost() {
