@@ -49,6 +49,7 @@ public class ShipItem {
             mTotalCost = mBaseCost + mAddedCost;
         }
         else{
+            mAddedCost = 0.0;
             mTotalCost = mBaseCost;
         }
     }
