@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         totalNumTextView = (TextView) findViewById(R.id.totalNumTextView);
 
         weightEditText.addTextChangedListener(weightListener);
+
+        updateViews();
     }
 
     private TextWatcher weightListener = new TextWatcher() {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Shipping Calculator</string>
+    <string name="app_name"> Versandrechner</string>
     <string name="addedCostText">Hinzugefügt Kosten:</string>
     <string name="baseCostText">Basiskosten:</string>
     <string name="ounceText">(In Unzen)</string>
